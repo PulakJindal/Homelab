@@ -1,0 +1,21 @@
+```yaml
+network:
+  version: 2
+  renderer: networkd
+
+  ethernets:
+    eno1:
+      match:
+        macaddress: YOUR_ETHERNET_MAC_ADDRESS
+      set-name: eno1
+
+  wifis:
+    wlp2s0:
+      dhcp4: true
+      access-points:
+        "HOME_WIFI_SSID":
+          password: "HOME_WIFI_PASSWORD"
+
+        "MOBILE_HOTSPOT_SSID":
+          password: "MOBILE_HOTSPOT_PASSWORD"
+```
